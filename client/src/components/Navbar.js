@@ -50,9 +50,9 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  padding: 10px;
+  padding: 8px;
   width: 300px;
-  font-size: 24px;
+  font-size: 20px;
   ${mobile({ width: "50px" })}
 `;
 
@@ -75,7 +75,7 @@ function Navbar() {
     <Container>
         <Wrapper>
             <Left>
-                <img src={logo} style={{height : '60px', marginRight: '15px'}} alt="" />
+                <img src={logo} style={{height : '50px', marginRight: '15px'}} alt="" />
                 <Logo>InAction</Logo>
             </Left>
             <Center>
