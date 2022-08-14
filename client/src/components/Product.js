@@ -40,15 +40,9 @@ const Image = styled.img`
   height: 75%;
   z-index: 2;
   width: 75%;   
+  border-radius:15px;
 
   
-`
-const Circle = styled.div`
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
 `
 const Icon = styled.div`
   width: 40px;
@@ -70,7 +64,6 @@ const Icon = styled.div`
 function Product({item}) {
   return (
     <Container>
-        <Circle/>
         <Image src={item.img}/>
         <Info>
             <Icon>
