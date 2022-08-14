@@ -44,8 +44,8 @@ const Image = styled.img`
   
 `
 const Circle = styled.div`
-  width: 400px;
-  height: 350px;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
   background-color: white;
   position: absolute;
