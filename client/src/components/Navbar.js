@@ -75,7 +75,7 @@ function Navbar() {
     <Container>
         <Wrapper>
             <Left>
-                <img src={logo} style={{height : '50px', marginRight: '15px'}} alt="" />
+                <img src={logo} style={{height : '60px', marginRight: '15px'}} alt="" />
                 <Logo>InAction</Logo>
             </Left>
             <Center>
