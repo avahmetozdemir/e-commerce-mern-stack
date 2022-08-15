@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import userRoute from './routes/user.js'
 
 dotenv.config()
 const app  = express()
@@ -10,7 +11,7 @@ const DB = process.env.DATABASE
 
 //MIDDLEWARES
 
-
+app.use('/api/v1/users', userRoute)
 
 
 
