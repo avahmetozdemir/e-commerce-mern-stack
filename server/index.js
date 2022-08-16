@@ -4,7 +4,9 @@ import dotenv from 'dotenv'
 import userRoute from './routes/user.js'
 import authRoute from './routes/auth.js'
 import productRoute from './routes/product.js'
-import orderRoutes from './routes/order.js'
+import orderRoute from './routes/order.js'
+import cartRoute from './routes/cart.js'
+
 dotenv.config()
 const app  = express()
 const port  =  process.env.PORT || 5000
@@ -17,6 +19,7 @@ app.use('/api/v1/users', userRoute)
 app.use('/api/v1/auth', authRoute)
 app.use('/api/v1/products', productRoute)
 app.use('/api/v1/orders', orderRoute)
+app.use('/api/v1/carts', cartRoute)
 
 //DATABASE CONNECTION
 mongoose.connect(DB).then(()=> {
