@@ -10,6 +10,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { publicRequest } from "../requestMethods";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../redux/cartRedux";
 
 
 
@@ -128,7 +130,7 @@ const SingleProduct = () => {
   const [quantity,setQuantity] = useState(1)
   const [color,setColor] = useState("")
   const [size,setSize] = useState("")
-
+  const dispatch = useDispatch()
   const handleQuantity = (type) => {
     if(type === 'inc') {
       setQuantity(quantity+1)
@@ -138,7 +140,7 @@ const SingleProduct = () => {
   }
 
   const handleAddToCart=()=> {
-    
+    dispatch(addProduct({...product, quantity,color,size}))
   }
 
   useEffect(()=> {
@@ -173,8 +175,8 @@ const SingleProduct = () => {
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                {product.size?.map(s=>( <FilterSizeOption key={s} onChange={(e)=> setSize(e.target.value)} >{s}</FilterSizeOption>) )}
+              <FilterSize onChange={(e)=> setSize(e.target.value)}>
+                {product.size?.map(s=>( <FilterSizeOption key={s}  >{s}</FilterSizeOption>) )}
                
               </FilterSize>
             </Filter>

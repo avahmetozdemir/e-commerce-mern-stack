@@ -3,7 +3,9 @@ import styled from "styled-components"
 import { mobile } from "../responsive";
 import {AiOutlineShoppingCart,AiOutlineSearch} from 'react-icons/ai'
 import logo from '../images/logo.png'
-
+import { useSelector } from 'react-redux';
+import Badge from '@mui/material/Badge';
+import { Link } from 'react-router-dom';
 const Container = styled.div`
     height :60px;
     ${mobile({ height: "50px" })}
@@ -71,6 +73,8 @@ const Right = styled.div`
 `;
 
 function Navbar() {
+
+  const quantity = useSelector(state=>state.cart.quantity)
   return (
     <Container>
         <Wrapper>
@@ -87,9 +91,13 @@ function Navbar() {
             <Right>
                 <MenuItem>REGISTER</MenuItem>
                 <MenuItem>SIGN IN</MenuItem>
+                <Link to="/cart">
                 <MenuItem>
-                        <AiOutlineShoppingCart />
+                <Badge badgeContent={quantity} color="primary">
+                <AiOutlineShoppingCart />
+                </Badge>
                 </MenuItem>
+                </Link>
              </Right>
         </Wrapper>
     </Container>
