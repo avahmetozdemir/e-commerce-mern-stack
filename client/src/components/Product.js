@@ -2,7 +2,7 @@ import React from 'react'
 import {AiOutlineShoppingCart,AiOutlineSearch} from 'react-icons/ai'
 import {MdFavoriteBorder} from 'react-icons/md'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 
 const Info = styled.div`
   opacity: 0;
@@ -70,7 +70,10 @@ function Product({item}) {
                 <AiOutlineShoppingCart />
             </Icon>
             <Icon>
-                <AiOutlineSearch />
+            <Link to={`/product/${item._id}`}>
+            <AiOutlineSearch />
+            </Link>
+                
             </Icon>
             <Icon>
                 <MdFavoriteBorder />

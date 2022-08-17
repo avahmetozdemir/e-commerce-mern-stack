@@ -3,13 +3,13 @@ export const categories = [
         id: 1,
         img :"https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ,
         title: "HOME FASHION",
-        cat: 'women'
+        cat: 'woman'
     }, 
     {
         id: 2,
         img :"https://images.pexels.com/photos/6626999/pexels-photo-6626999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" ,
         title: "LIGHT JACKET",
-        cat:"jeans"
+        cat:"man"
     },  
     {
         id: 3,

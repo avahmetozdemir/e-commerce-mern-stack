@@ -61,7 +61,7 @@ router.get('/find/:id',async(req,res)=> {
 router.get('/', async(req,res)=> {
   
     const qNew =req.query.new //returns latest one
-    const qCategory =req.query.qCategory //returns by its category
+    const qCategory =req.query.category //returns by its category
 
     try {
         let products;
